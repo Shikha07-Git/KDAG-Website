@@ -28,7 +28,7 @@ import ImageGrid from "../components/GalleryPage/ImageGrid/ImageGrid.js";
 import GoogleCallback from "../components/AuthenticationPages/GoogleCallback.js";
 import { AuthProvider } from "../context/AuthContext.js";
 import CommunityGuidelines from "../components/DiscussionForum/CommunityGuidelines.js";
-import PrivacyPolicy from "../components/Privacy Policies/PrivacyPolicy.js";
+import PrivacyPolicy from "../components/Privacy Policies/PrivacyPolicy.jsx";
 import RegisterPage from "../components/RegisterPage/RegisterPage.js";
 import Success from "../components/RegisterPage/Success.js";
 import Course from "../components/Resources_New/course.js";
@@ -77,7 +77,7 @@ const AppRouter = () => {
 								<GoogleCallback />
 							</Route>
 							<Route path={`/register`}>
-								<Register />	
+								<Register />
 							</Route>
 							<Route path="/alumni">
 								<AlumniPage />

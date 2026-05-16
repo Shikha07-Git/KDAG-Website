@@ -41,19 +41,17 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "cross-env NODE_OPTIONS=--openssl-legacy-provider DISABLE_ESLINT_PLUGIN=true GENERATE_SOURCEMAP=false react-scripts start",
-    "dev": "cross-env NODE_OPTIONS=--openssl-legacy-provider DISABLE_ESLINT_PLUGIN=true GENERATE_SOURCEMAP=false FAST_REFRESH=true react-scripts start",
-    "build": "cross-env NODE_OPTIONS=--openssl-legacy-provider GENERATE_SOURCEMAP=false react-scripts build",
-    "build:analyze": "cross-env NODE_OPTIONS=--openssl-legacy-provider ANALYZE=true npm run build",
-    "serve": "serve -s build -l 3000",
-    "serve:prod": "serve -s build -l 3000 --single",
-    "preview": "npm run build && npm run serve",
+    "dev": "vite",
+    "start": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "serve": "serve -s dist -l 3000",
+    "serve:prod": "serve -s dist -l 3000 --single",
     "test": "react-scripts test",
     "test:watch": "react-scripts test --watchAll",
     "test:coverage": "react-scripts test --coverage",
-    "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d dist"
   },
   "eslintConfig": {
     "extends": [
@@ -79,8 +77,10 @@
   },
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "@vitejs/plugin-react": "^5.1.4",
     "cross-env": "^7.0.3",
     "gh-pages": "^6.3.0",
-    "serve": "^14.2.1"
+    "serve": "^14.2.1",
+    "vite": "^7.3.3"
   }
 }
